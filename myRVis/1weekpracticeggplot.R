@@ -94,4 +94,28 @@ CIC %>%#7번째 플롯, 임대료와 지역 구매력에 관한 관계
   ggplot(aes(x =Rent.Index, y = Local.Purchasing.Power.Index,color = Country ))+
   geom_jitter(alpha = 0.6)+
   scale_colour_manual(values = c("South Korea" = "red"))+
-  stat_smooth(method = 'lm', se = F, col = "Blue")
+  stat_smooth(method = 'lm', se = F, col = "Blue")+
+  geom_text(data = CIC[CIC$Country == "South Korea",], 
+            aes(label = paste("South Korea\n(", round(Rent.Index, 1), ", ", round(Local.Purchasing.Power.Index, 1), ")", sep = "")), 
+            vjust = -1, hjust = 1, color = "red", size = 3)
+
+#이번에는 한국보다 위쪽에 있는 국가들을 확인해보고자 함
+south_korea_values <- CIC[CIC$Country == "South Korea", c("Rent.Index", "Local.Purchasing.Power.Index")]
+#한국의 값을 기본적으로 저장한 후, 한국보다 값이 높은 국가들을 filter한다
+filtered_countries <- CIC %>%
+  filter(Rent.Index < south_korea_values$Rent.Index & 
+           Local.Purchasing.Power.Index > south_korea_values$Local.Purchasing.Power.Index)
+
+CIC %>%#7번째 플롯, 임대료와 지역 구매력에 관한 관계 
+  ggplot(aes(x =Rent.Index, y = Local.Purchasing.Power.Index,color = Country ))+
+  geom_jitter(alpha = 0.6)+
+  scale_colour_manual(values = c("South Korea" = "red","Japan"= "blue","Oman"= "blue","Saudi Arabia" = "blue"))+
+  stat_smooth(method = 'lm', se = F, col = "Blue")+
+  geom_text(data = CIC[CIC$Country == "South Korea",], 
+            aes(label = paste("South Korea\n(", round(Rent.Index, 1), ", ", round(Local.Purchasing.Power.Index, 1), ")", sep = "")), 
+            vjust = -1, hjust = 1, color = "red", size = 3)+
+  geom_text(data = filtered_countries, 
+            aes(label = Country), 
+            vjust = -1, hjust = 1, color = "blue", size = 2)
+#기준이 되는 뉴욕에 비해, 임대료는 16%, 구매력은 109%로 더욱 살기 좋음.
+
