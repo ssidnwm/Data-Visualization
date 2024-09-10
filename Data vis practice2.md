@@ -24,7 +24,7 @@
       geom_point()
     ```
     
-    ![image.png](image.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image.png?raw=true)
     
     ### Task1-2: scale 함수나 labs , ggtitle 등의 함수를 활용하여 그래프를 더 잘 읽을수 있도록 보완하자
     
@@ -37,7 +37,7 @@
       scale_x_log10("POP",labels = scales::trans_format("log10", scales::math_format(10^.x)))
     ```
     
-    ![image.png](image%201.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%201.png?raw=true)
     
     지수로 표현되는 값들에 대해 보다 그 값이 정규화되도록 log를 사용해 값들을 흩뿌려 시각화함
     
@@ -66,7 +66,7 @@
       scale_x_log10("personal GDP(USD)",labels = scales::trans_format("log10", scales::math_format(10^.x)))
     ```
     
-    ![image.png](image%202.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%202.png?raw=true)
     
     도시 인구비율과 인당GDP에 대해 시각화하였다, y축의 경우 %값으로 0~1사이의 분포되어 있으며 personal GDP는 달러값으로 지수함수로 표현이 되었다. 여기서 추가로 몇가지 신기한 이상치들만 체크해보려고 한다.
     
@@ -111,7 +111,7 @@
       scale_x_log10("personal GDP(USD)",labels = scales::trans_format("log10", scales::math_format(10^.x)))
     ```
     
-    ![image.png](image%203.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%203.png?raw=true)
     
     ### Task2-2: 인당 GDP 와 합계 출산율 (fertility rate)의 관계를 나타내는 scatterplot 을 그려보자
     
@@ -125,7 +125,7 @@
       ggtitle("Relation Personal GDP and Fertility Rate")
     ```
     
-    ![image.png](image%204.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%204.png?raw=true)
     
     인당 gdp가 높은 국가들의 경우 합계출산률이 전반적으로 내려가는 경향을 보이고 있다.
     
@@ -142,7 +142,7 @@
       ggtitle("Relation Personal GDP and Fertility Rate")
     ```
     
-    ![image.png](image%205.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%205.png?raw=true)
     
     ### Task2-3: 2-1, 2-2 의 그래프를 동일한 x 축 (GPD per Capita) 상에 나타내어라.
     
@@ -165,7 +165,7 @@
       ggtitle("Vis for fertility, urban ratio to pop GDP")
     ```
     
-    ![image.png](image%206.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%206.png?raw=true)
     
     ### 정치형태별(democracy_type) 인당 gdp 를 표현하는 그래프를 아래와 같이 그려보자
     
@@ -181,7 +181,7 @@
       ggtitle("GDP per capita by political form")
     ```
     
-    ![image.png](image%207.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%207.png?raw=true)
     
     ### Task 3-2:  정치 형태에 따른 평균 인당 gdp 를 계산하여 아래 그림과 같이 layer 를 추가해보자
     
@@ -198,7 +198,7 @@
       labs(x = "Democracy Type")
     ```
     
-    ![image.png](image%208.png)
+    ![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%208.png?raw=true)
     
 
 정치형태별 인당GDP의 평균을 정확한 수치로 확인해보자
@@ -211,7 +211,7 @@ countries%>%
   arrange(desc(decGDP))
 ```
 
-![image.png](image%209.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%209.png?raw=true)
 
 full democracy가 57631$,  unknown이 26745$, flawed democracy가 17741$이다.
 
@@ -232,7 +232,7 @@ countries%>%
   stat_smooth(method = 'lm', se = F, col = "Blue")
 ```
 
-![image.png](image%2010.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%2010.png?raw=true)
 
 한국의 탄소배출량은 조금 높은 편이다. 그렇다면 인당 GDP에 따른 탄소배출량은 어떨까?
 
@@ -250,7 +250,7 @@ countries %>%
 
 단순히 인당GDP와 탄소배출량의 관계를 살펴보았다. 
 
-![image.png](image%2011.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%2011.png?raw=true)
 
 해당 시각화 자료에서는 인당 gdp에 대해서 전반적으로 고른 분포가 나온것으로 보아 선진국들도 탄소배출 억제를 위해 노력하고 있음을 알 수 있다.
 
@@ -275,9 +275,9 @@ countries%>%
   scale_x_log10("personal GDP(USD)",labels = scales::trans_format("log10", scales::math_format(10^.x)))
 ```
 
-![image.png](image%2012.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%2012.png?raw=true)
 
-![image.png](image%2013.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%2013.png?raw=true)
 
 한국의 경우 도시중심 비중이 높고, 인당 gdp역시 높은것을 볼 수 있다. 그러나 전 세계적인 추세로 본다면 한국의 수도권 과밀화가 다른 나라들만큼 크지 않다고 볼수도 있다.
 
@@ -295,7 +295,7 @@ countries %>%
   ggtitle("Flawed democracy and GDP per capita")
 ```
 
-![image.png](image%2014.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%2014.png?raw=true)
 
 flawed democracy안에서 우리나라는의 위치를 시각화해 보았다. 그렇다면 어느 나라들이 우리나라 이상의 인당GDP를 가지고 있는지 확인해보자
 
@@ -315,6 +315,6 @@ countries %>%
 
 ```
 
-![image.png](image%2015.png)
+![image.png](https://github.com/ssidnwm/Data-Visualization/blob/main/Data%20vis%20practice2/image%2015.png?raw=true)
 
 데이터프레임으로 확인하였을때, 다음과 같은 국가들이 나온다.
