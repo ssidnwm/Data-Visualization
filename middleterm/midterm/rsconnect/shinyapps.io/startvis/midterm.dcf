@@ -1,0 +1,12 @@
+name: midterm
+title: midterm
+username: startvis
+account: startvis
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13065779
+bundleId: 9243286
+url: https://startvis.shinyapps.io/midterm/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

@@ -79,6 +79,16 @@ countries%>%
 #Task2-2: 인당 GDP 와 합계 출산율 (fertility rate)의 관계를 나타내는 scatterplot 을그려보자
 countries%>%
   mutate("pop_GDP"=gdp/population)%>%
+  filter(fertility_rate < 1)%>%
+  select(country, fertility_rate)
+
+
+
+
+
+
+countries%>%
+  mutate("pop_GDP"=gdp/population)%>%
   ggplot(aes(x = pop_GDP, y = fertility_rate, color = country))+
   geom_point()+
   scale_colour_manual(values = c("Korea" = "red"))+
